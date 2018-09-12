@@ -1,0 +1,17 @@
+- Show how to save html file and open it in the browser
+- Add header and change the file name as seen on the browser
+- Add body and print your name "HI XYZ" 
+- Add <h1> to <h6> tags to change the size of the body printed earlier
+- Change the color of the text in the tags to demonstrate CSS
+- Play around a bit with different styling techniques and let the kids play around with the styling to suit what they find fun
+- Position the body to be center aligned and add borders
+- Teach the students rock paper scissors game. Play with them physically and teach them how it works.
+- Tell them that we are now going to play against the computer
+- Google images or look up in thumb drive for the images of rocks
+- Add them to the html 
+- Do the same for images of paper and scissor
+- Once they are added, play around with css to position them and name them appropriately
+- Then add button to generate computers response
+- -------JS part to add logic around how to select the appropriate image (randomize)---------
+- Play with the computer
+- Once done, show them how to add videos to your html file, etc. 
