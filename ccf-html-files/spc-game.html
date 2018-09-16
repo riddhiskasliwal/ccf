@@ -1,0 +1,91 @@
+<html>
+<head>
+  <title> Rock, Paper, Scissors </title>
+</head>
+<body>
+  <div align="center">
+    <h1>Rock, Paper, Scissors</h1>
+    <a href="javascript:playGame('rock')">
+      <img src="images/rock.gif" width="500px"/>
+    </a>
+    <a href="javascript:playGame('paper')">
+      <img src="images/paper.jpeg" width="500px"/>
+    </a>
+    <a href="javascript:playGame('scissors')">
+      <img src="images/scissors.jpeg" width="500px"/>
+    </a>
+  </div>
+  <div align="center">
+    <h2 id="user-choice"></h2>
+    <p id="user-choice-image"></p>
+    <h2 id="computer-choice"></h2>
+    <p id="computer-choice-image"></p>
+    <h1 id="game-result"></h1>
+  </div>
+  <script>
+
+  function playGame(userChoice) {
+    console.log(userChoice);
+    var computerChoice = Math.random();
+    if (computerChoice < 0.34) {
+      computerChoice = "rock";
+    } else if(computerChoice <= 0.67) {
+      computerChoice = "paper";
+    } else {
+      computerChoice = "scissors";
+    }
+
+    let userImage = '<img src="images/hand-' + userChoice + '.jpeg" width="100px"/>';
+    let computerImage = '<img src="images/hand-' + computerChoice + '.jpeg" width="100px"/>';
+
+    document.getElementById("user-choice").innerHTML =
+    "You chose " + userChoice;
+
+    document.getElementById("user-choice-image").innerHTML = userImage;
+
+    document.getElementById("computer-choice").innerHTML =
+    "Computer chose " + computerChoice;
+
+    document.getElementById("computer-choice-image").innerHTML = computerImage;
+
+    let result = compare(userChoice, computerChoice);
+
+    document.getElementById("game-result").innerHTML =
+    result;
+  }
+
+  var compare = function(choice1,choice2) {
+      if (choice1 === choice2) {
+          return "It's a tie!";
+      }
+      if (choice1 === "rock") {
+          if (choice2 === "scissors") {
+              // rock wins
+              return "You win!";
+          } else {
+              // paper wins
+              return "You lose! Try again.";
+          }
+      }
+      if (choice1 === "paper") {
+          if (choice2 === "rock") {
+              // paper wins
+              return "You win!";
+          } else {
+              // scissors wins
+              return "You lose! Try again.";
+          }
+      }
+      if (choice1 === "scissors") {
+          if (choice2 === "rock") {
+              // rock wins
+              return "You lose! Try again.";
+          } else {
+              // scissors wins
+              return "You win!";
+          }
+      }
+    }
+  </script>
+</body>
+</html>
