@@ -1,3 +1,4 @@
+- Show example websites - Google, Wikipedia page of Cambodia, Github, 
 - Show how to save html file and open it in the browser
 - Add header and change the file name as seen on the browser
 - Add body and print your name "HI XYZ" 
