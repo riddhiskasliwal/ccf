@@ -9,7 +9,7 @@
     <button type="button" onClick="computerPlay()" >Click Me!</button>
     <h3 id="computer-choice"></h3>
     <div id="computer-choice-image"></div>
-
+  </div>
   <script>
   function computerPlay() {
     let randomNumber = Math.random();
@@ -23,7 +23,7 @@
       computerChoice = "scissors";
     }
     // Step 1
-    console.log(computerChoice)
+    console.log(computerChoice);
     // Step 2
     document.getElementById("computer-choice").innerHTML = "Computer chose " +
       computerChoice + "!";
