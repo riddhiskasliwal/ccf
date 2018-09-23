@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title> Rock, Paper, Scissors </title>
+</head>
+<body>
+  <div align="center">
+    <h1>Rock, Paper, Scissors</h1>
+    <!-- More info on buttons https://www.w3schools.com/tags/tag_button.asp -->
+    <button type="button" onClick="computerPlay()" >Click Me!</button>
+    <h3 id="computer-choice"></h3>
+    <div id="computer-choice-image"></div>
+
+  <script>
+  function computerPlay() {
+    let randomNumber = Math.random();
+    let computerChoice = "rock";
+
+    if (randomNumber < 0.34) {
+      computerChoice = "rock";
+    } else if(randomNumber <= 0.67) {
+      computerChoice = "paper";
+    } else {
+      computerChoice = "scissors";
+    }
+    // Step 1
+    console.log(computerChoice)
+    // Step 2
+    document.getElementById("computer-choice").innerHTML = "Computer chose " +
+      computerChoice + "!";
+    // Step 3
+    let computerChoiceImage = '<img src="images/rock.jpeg" width="500px"/>';
+
+    if(computerChoice === "paper") {
+      computerChoiceImage = '<img src="images/paper.jpeg" width="500px"/>';
+    }
+    else if(computerChoice === "scissors") {
+      computerChoiceImage = '<img src="images/scissors.jpeg" width="500px"/>';
+    }
+
+    document.getElementById("computer-choice-image").innerHTML =
+      computerChoiceImage;
+
+  }
+  </script>
+</body>
+</html>
