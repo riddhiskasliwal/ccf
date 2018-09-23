@@ -1,0 +1,109 @@
+<html>
+<head>
+  <title> Rock, Paper, Scissors </title>
+</head>
+<body>
+  <div align="center">
+    <h1>Rock, Paper, Scissors</h1>
+    <!-- More info on buttons https://www.w3schools.com/tags/tag_button.asp -->
+    <h3>Choose one: </h3>
+    <button type="button" onClick="playGame('rock')" >Rock</button>
+    <button type="button" onClick="playGame('paper')" >Paper</button>
+    <button type="button" onClick="playGame('scissors')" >Scissors</button>
+
+    <h3 id="user-choice"></h3>
+    <div id="user-choice-image"></div>
+
+    <h3 id="computer-choice"></h3>
+    <div id="computer-choice-image"></div>
+
+    <h2 id="result"></h2>
+  </div>
+  <script>
+  function getImageByChoice(choice) {
+    let choiceImage;
+
+    if(choice === "paper") {
+      choiceImage = '<img src="images/paper.jpeg" width="300px"/>';
+    }
+    else if(choice === "scissors") {
+      choiceImage = '<img src="images/scissors.jpeg" width="300px"/>';
+    }
+    else {
+      choiceImage = '<img src="images/rock.jpeg" width="300px"/>';
+    }
+    return choiceImage;
+  }
+
+  function compare(choice1,choice2) {
+      if (choice1 === choice2) {
+          return "It's a tie!";
+      }
+      if (choice1 === "rock") {
+          if (choice2 === "scissors") {
+              // rock wins
+              return "You win!";
+          } else {
+              // paper wins
+              return "You lose! Try again.";
+          }
+      }
+      if (choice1 === "paper") {
+          if (choice2 === "rock") {
+              // paper wins
+              return "You win!";
+          } else {
+              // scissors wins
+              return "You lose! Try again.";
+          }
+      }
+      if (choice1 === "scissors") {
+          if (choice2 === "rock") {
+              // rock wins
+              return "You lose! Try again.";
+          } else {
+              // scissors wins
+              return "You win!";
+          }
+      }
+  }
+
+  function playGame(userChoice) {
+    let randomNumber = Math.random();
+    let computerChoice = "rock";
+
+    if (randomNumber < 0.34) {
+      computerChoice = "rock";
+    } else if(randomNumber <= 0.67) {
+      computerChoice = "paper";
+    } else {
+      computerChoice = "scissors";
+    }
+    // Step 1
+    console.log("Coputer chose: " + computerChoice);
+    console.log("User chose: " + userChoice);
+
+    // Step 2
+    document.getElementById("computer-choice").innerHTML = "Computer chose " +
+      computerChoice + "!";
+    document.getElementById("user-choice").innerHTML = "You chose " +
+      userChoice + "!";
+
+    // Step 3 - Improvement: Display image side by side
+    let computerChoiceImage = getImageByChoice(computerChoice);
+    let userChoiceImage = getImageByChoice(userChoice);
+
+    document.getElementById("computer-choice-image").innerHTML =
+      computerChoiceImage;
+    document.getElementById("user-choice-image").innerHTML =
+      userChoiceImage;
+
+    // Step 4 - decide winner!
+    let result = compare(userChoice, computerChoice);
+    document.getElementById("result").innerHTML =
+    result;
+
+  }
+  </script>
+</body>
+</html>
