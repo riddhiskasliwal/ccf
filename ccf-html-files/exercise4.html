@@ -36,11 +36,11 @@
   }
 
   function compare(choice1,choice2) {
-      if (choice1 === choice2) {
+      if (choice1 == choice2) {
           return "It's a tie!";
       }
-      if (choice1 === "rock") {
-          if (choice2 === "scissors") {
+      if (choice1 == "rock") {
+          if (choice2 == "scissors") {
               // rock wins
               return "You win!";
           } else {
@@ -48,8 +48,8 @@
               return "You lose! Try again.";
           }
       }
-      if (choice1 === "paper") {
-          if (choice2 === "rock") {
+      if (choice1 == "paper") {
+          if (choice2 == "rock") {
               // paper wins
               return "You win!";
           } else {
@@ -57,8 +57,8 @@
               return "You lose! Try again.";
           }
       }
-      if (choice1 === "scissors") {
-          if (choice2 === "rock") {
+      if (choice1 == "scissors") {
+          if (choice2 == "rock") {
               // rock wins
               return "You lose! Try again.";
           } else {
