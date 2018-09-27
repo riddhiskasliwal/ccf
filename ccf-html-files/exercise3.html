@@ -19,22 +19,50 @@
 
   </div>
   <script>
-  function getImageByChoice(choice) {
-    var choiceImage;
+  // function getImageByChoice(choice) {
+  //   var choiceImage;
 
-    if(choice === "paper") {
-      choiceImage = '<img src="images/paper.jpeg" width="300px"/>';
-    }
-    else if(choice === "scissors") {
-      choiceImage = '<img src="images/scissors.jpeg" width="300px"/>';
-    }
-    else {
-      choiceImage = '<img src="images/rock.jpeg" width="300px"/>';
-    }
-    return choiceImage;
-  }
+  //   if(choice === "paper") {
+  //     choiceImage = '<img src="images/paper.jpeg" width="300px"/>';
+  //   }
+  //   else if(choice === "scissors") {
+  //     choiceImage = '<img src="images/scissors.jpeg" width="300px"/>';
+  //   }
+  //   else {
+  //     choiceImage = '<img src="images/rock.jpeg" width="300px"/>';
+  //   }
+  //   return choiceImage;
+  // }
 
-  function playGame(userChoice) {
+  // function playGame(userChoice) {
+  //   var randomNumber = Math.random();
+  //   var computerChoice = "rock";
+
+  //   if (randomNumber < 0.34) {
+  //     computerChoice = "rock";
+  //   } else if(randomNumber <= 0.67) {
+  //     computerChoice = "paper";
+  //   } else {
+  //     computerChoice = "scissors";
+  //   }
+  //   // Step 1
+  //   console.log("Coputer chose: " + computerChoice);
+  //   console.log("User chose: " + userChoice);
+  //   // Step 2
+  //   document.getElementById("computer-choice").innerHTML = "Computer chose " +
+  //     computerChoice + "!";
+  //   document.getElementById("user-choice").innerHTML = "You chose " +
+  //     userChoice + "!";
+  //   // Step 3
+  //   var computerChoiceImage = getImageByChoice(computerChoice);
+  //   var userChoiceImage = getImageByChoice(userChoice);
+
+  //   document.getElementById("computer-choice-image").innerHTML =
+  //     computerChoiceImage;
+  //   document.getElementById("user-choice-image").innerHTML =
+  //     userChoiceImage;
+  // }
+  function computerPlay() {
     var randomNumber = Math.random();
     var computerChoice = "rock";
 
@@ -46,21 +74,39 @@
       computerChoice = "scissors";
     }
     // Step 1
-    console.log("Coputer chose: " + computerChoice);
-    console.log("User chose: " + userChoice);
+    console.log(computerChoice);
     // Step 2
     document.getElementById("computer-choice").innerHTML = "Computer chose " +
       computerChoice + "!";
-    document.getElementById("user-choice").innerHTML = "You chose " +
-      userChoice + "!";
     // Step 3
-    var computerChoiceImage = getImageByChoice(computerChoice);
-    var userChoiceImage = getImageByChoice(userChoice);
+    var computerChoiceImage = '<img src="images/rock.jpeg" width="500px"/>';
+
+    if(computerChoice == "paper") {
+      computerChoiceImage = '<img src="images/paper.jpeg" width="500px"/>';
+    }
+    else if(computerChoice == "scissors") {
+      computerChoiceImage = '<img src="images/scissors.jpeg" width="500px"/>';
+    }
 
     document.getElementById("computer-choice-image").innerHTML =
       computerChoiceImage;
+  }
+
+  function userPlay(choice) {
+    var choiceImage;
+
+    if(choice === "paper") {
+      choiceImage = '<img src="images/paper.jpeg" width="300px"/>';
+    }
+    else if(choice === "scissors") {
+      choiceImage = '<img src="images/scissors.jpeg" width="300px"/>';
+    }
+    else {
+      choiceImage = '<img src="images/rock.jpeg" width="300px"/>';
+    }
     document.getElementById("user-choice-image").innerHTML =
-      userChoiceImage;
+      choiceImage;
+    computerPlay();
   }
   </script>
 </body>
