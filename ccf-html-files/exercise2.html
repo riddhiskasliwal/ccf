@@ -12,8 +12,8 @@
   </div>
   <script>
   function computerPlay() {
-    let randomNumber = Math.random();
-    let computerChoice = "rock";
+    var randomNumber = Math.random();
+    var computerChoice = "rock";
 
     if (randomNumber < 0.34) {
       computerChoice = "rock";
@@ -28,7 +28,7 @@
     document.getElementById("computer-choice").innerHTML = "Computer chose " +
       computerChoice + "!";
     // Step 3
-    let computerChoiceImage = '<img src="images/rock.jpeg" width="500px"/>';
+    var computerChoiceImage = '<img src="images/rock.jpeg" width="500px"/>';
 
     if(computerChoice === "paper") {
       computerChoiceImage = '<img src="images/paper.jpeg" width="500px"/>';

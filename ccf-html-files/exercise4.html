@@ -21,7 +21,7 @@
   </div>
   <script>
   function getImageByChoice(choice) {
-    let choiceImage;
+    var choiceImage;
 
     if(choice === "paper") {
       choiceImage = '<img src="images/paper.jpeg" width="300px"/>';
@@ -69,8 +69,8 @@
   }
 
   function playGame(userChoice) {
-    let randomNumber = Math.random();
-    let computerChoice = "rock";
+    var randomNumber = Math.random();
+    var computerChoice = "rock";
 
     if (randomNumber < 0.34) {
       computerChoice = "rock";
@@ -90,8 +90,8 @@
       userChoice + "!";
 
     // Step 3 - Improvement: Display image side by side
-    let computerChoiceImage = getImageByChoice(computerChoice);
-    let userChoiceImage = getImageByChoice(userChoice);
+    var computerChoiceImage = getImageByChoice(computerChoice);
+    var userChoiceImage = getImageByChoice(userChoice);
 
     document.getElementById("computer-choice-image").innerHTML =
       computerChoiceImage;
@@ -99,7 +99,7 @@
       userChoiceImage;
 
     // Step 4 - decide winner!
-    let result = compare(userChoice, computerChoice);
+    var result = compare(userChoice, computerChoice);
     document.getElementById("result").innerHTML =
     result;
 
