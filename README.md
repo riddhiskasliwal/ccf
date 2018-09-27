@@ -1,2 +1,3 @@
 # ccf
-This repo has course materials for teaching basic programming to underprivileged kids from Cambodia. Partnering with CCF
+
+Exercises used for html js css starter course for Cambodia Children's Fund. 
