@@ -1,0 +1,67 @@
+
+    <head>
+   
+
+        <title> Rock paper scissor</title>
+    </head>
+    <body>
+          <h1 style="color: purple;font-size:100;background-color: brown; border: 5px solid rgba(0, 255, 34, 0.26);">Rock scissor and Paper game</h1>  
+            <p style="text-align: center;"> <img src="images.png" alt="scissor"></p>
+            <p style="text-align: center;"> <img src="download (1).jpg" alt="rock"></p>
+            <p style="text-align: center;"> <img src="images3.jpg" alt="paper"></p>
+            <button id="rock" onclick="userplay('scissor')">scissor</button>
+            <button id="paper"onclick="userplay('paper')">paper</button>
+            <button id="rock"onclick="userplay('rock')">rock</button>
+            <button style="background-color:yellow;margin:auto;display:block;padding: 14px 60px;" type="button" onclick="computerPlay()">Play!</button>
+            <h3 style="text-align: center;" id = "choice"> </h3>
+            <div style="text-align: center;" id="choiceImage"></div>
+            <h1 id="choiceuser"></h1>
+            <h2 id="user-choice-image"></h2>
+            
+ 
+            <script>
+            function userplay(userChoice){
+                if (userChoice ==='rock'){
+                    console.log("User choice is rock")
+                    document.getElementById("choiceuser").innerHTML = "User choice is rock"
+                    document.getElementById("uer-choice-image").innerHTML = '<img src="download (1).jpg" alt="rock" width="500px"/>';
+                }else if (userChoice === 'paper'){
+                    console.log("User choice is paper")
+                }else{
+                    console.log("User choice is scissors")
+                }
+               
+            }
+
+            function computerPlay() {
+               var random = Math.random();
+               console.log(random);
+               var rockPaperScissorChoice = "rock";
+                if (random < 0.34) {
+                    rockPaperScissorChoice = "rock";
+                } else if(random <= 0.67) {
+                    rockPaperScissorChoice = "paper";
+                } else {
+                    rockPaperScissorChoice = "scissors";
+                }
+                var rockPaperScissorImage = '<img src="download (1).jpg" alt="rock" width="500px"/>';
+                if(rockPaperScissorChoice === "paper") {
+                    rockPaperScissorImage =  '<img src="images3.jpg" alt="paper"" width="500px"/>';
+                }
+                else if(rockPaperScissorChoice === "scissors") {
+                    rockPaperScissorImage = '<img src="images.png" alt="scissor" width="500px"/>';
+                }
+                document.getElementById("choiceImage").innerHTML = rockPaperScissorImage;
+                document.getElementById("choice").innerHTML = rockPaperScissorChoice;
+                console.log(rockPaperScissorChoice);
+                
+                
+}
+
+
+            </script>
+        
+              
+      
+    </body>
+</html

@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Game</title>
+        <style>
+            .center{ margin-left: auto;
+                     margin-right: auto;
+                     display: block;
+                     width: 25%;   
+                        }
+             .sty{
+                 text-align: center;
+                 margin-left: auto;
+                     margin-right: auto;
+                     display: block;
+                     width: 25%;   
+                        }
+
+             }           
+        </style>
+       
+    </head>
+    <body>
+       
+        <!--Note-->
+        <h1 id="neymar2" style="color: rgb(205, 253, 31); font-size: 65px;background-color: teal; text-align: center;">Rock Paper Scissor</h1>
+        
+        <h1 id="play" style="color: royalblue; font-size: 45px; background-color: peru; text-align: center"> Let's Play!</h1>
+         <button type="button" style="font-size: 45px;"class="center" onClick="computerPlay();"> Play! </button>
+         <h3>Choose one: </h3>
+    <button id="rock" onClick="userPlay('rock')">Rock</button>
+    <button id="paper" onClick="userPlay('paper')">Paper</button>
+    <button id="scissors" onClick="userPlay('scissors')">Scissors</button>
+      
+       
+      <script>
+          function computerPlay(){
+            var random = Math.random();
+            console.log(random);
+             
+              
+              var computerChoice = "rock";
+            if(random < 0.34) {computerChoice="Computer chose Rock!";} else if (random <= 0.67){computerChoice="Computer chose Paper!";} else{computerChoice="Computer chose Scissors!";}
+            console.log(computerChoice);
+            
+            document.getElementById("computer-chose").innerHTML = computerChoice;
+
+           var computerChoiceImage = '<img src="p.png" width="25px" class="sty"/>';
+            if(computerChoice === "Computer chose Rock!") {
+            computerChoiceImage = '<img src="rock.jpg" class="sty"/>';
+                }
+                else if(computerChoice === "Computer chose Scissors!") {
+            computerChoiceImage = '<img src="sc.png" class="sty"/>';
+                }
+                
+                document.getElementById("image").innerHTML = computerChoiceImage;
+
+            
+            
+        
+          }
+          function userPlay(userChoice){
+              if(userChoice === 'rock'){
+                  console.log("User Choice is Rock!");
+                  document.getElementById("anything").innerHTML= "User Choice is Rock!";
+                  document.getElementById("imge").innerHTML= '<img src="rock.jpg" width="150px">';
+              } else if(userChoice === 'paper'){
+                  console.log("User Choice is Paper!");
+                  document.getElementById("anything").innerHTML= "User Choice is Paper!";
+                  document.getElementById("imge").innerHTML= '<img src="p.png">';
+              } else{
+                  console.log("User Choice is Scissors!");
+                  document.getElementById("anything").innerHTML= "User Choice is Scissors!";
+                  document.getElementById("imge").innerHTML= '<img src="sc.png">';
+              }         
+              computerPlay();
+               }
+
+             
+
+       
+        
+       
+
+      </script>
+       <h3 id="computer-chose" style="text-align: center; font-size: 35px; color: burlywood;"></h3>
+       <div id="image"></div>
+       <h2 id="anything" class="sty"></h2>
+       <h2 id="imge" class="sty"></h2>
+
+
+    
+   
+    
+   
+  
+  
+
+  
+              
+              
+          
+    
+        
+    </body>
+</html>

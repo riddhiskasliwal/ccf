@@ -1,0 +1,70 @@
+<html>
+
+<head>
+    <title>code rock paper scissor.html</title>
+
+</head>
+
+<body>
+
+    <p style="text-align: center;">
+    <img src="rock.png" alt="rock"> 
+    </p>>                                                                                                                                          "
+    <p style="text-align: center;">
+    <img src="paper.png" alt="paper"> 
+    </p>
+    <p style="text-align: center;">
+    <img src="scissors.html.png" alt="scissors"> 
+    </p>
+    
+    
+    <button id = "rock" onclick= userPlay('rock')>rock</button>
+    <button id = "paper" onclick= userPlay('[paper')>rock</button>
+    <button id = "scissors" onclick= userPlay('scossors')>rock</button>
+    <button tyle="button">rock</button>
+    <button tyle="button">paper</button>
+    <button tyle="button">scissors</button>                           
+   
+   
+   
+   
+   
+   
+    <button type="button" onclick="computerPlay()" >play! </button>
+    <script>
+        function computerPlay(){
+        
+        var random = Math.random();
+        console.log(random);
+        var computerChoice ="rock";
+        if (random < 0.34){
+        computerChoice = "rock";
+        } else if(random < 0.67){ 
+        computerChoice = "paper";
+        } else {
+        computerChoice = "scissors";
+        }
+        console.log(computerChoice);
+        
+        var computerChoiceImage = '<img src="rock.png" width="500px"/>';
+        if(computerChoice === "paper") {
+        computerChoiceImage = '<img src="paper.png" width="500px"/>';
+       }
+        else if(computerChoice === "scissors") {
+        computerChoiceImage = '<img src="scissors.html.png" width="500px"/>';
+       } else {
+        computerChoiceImage = '<img src="rock.png" width="500px"/>';
+       }
+       document.getElementById("computerimage").innerHTML = computerChoiceImage;
+      
+       document.getElementById("choiceText").innerHTML = "Computer chose " + computerChoice + "!"; 
+        
+       }
+      </script>
+    <h1 id="choiceText"></h1>
+    <h2 id="computerimage"></h2>
+</body>
+
+</html>
+
+

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>rock paper scissors </title>
+    </head>
+    <body>
+        <h1 style="color:red;background-color:green;font-size: 50px">rock paper scissors </h1>
+        <p style="text-align: center">
+            <img src="128.jpg" width="500px">
+            <img src="129.jpg" width="500px">
+            <img src="130.jpg" width="500px">
+        <button type="button" onClick="computerplay();"> play!</button>
+        <button onclick="userplay('rock')">rock</button>
+        <button onclick="userplay('paper')">paper</button>
+        <button onclick="userplay('scissoes')">scissors</button>
+
+        </p>
+        <h1 id="computer-choice"></h1>
+        <h2 id="computer-choice-image"></h2>
+        <script>
+        function computerplay(){
+            var random=Math.random();
+            console.log(random);
+            var computerchoice="rock";
+            if (random < 0.34){
+            computerchoice = "rock";
+            } 
+            else if (random < 0.57) {
+            computerchoice = "paper";}
+            else{
+            computerchoice= "scissoes";
+            }
+            console.log(computerchoice);
+            document.getElementById("computer-choice").innerHTML = "Computer chose " + computerchoice + "!";
+
+            var computerchoiceImage='<img scr="130.jpg"/>';
+            if (computerchoice==="rock"){
+               computerchoiceImage='<img scr="130.jpg"/>';
+            } else if(computerchoice==="scissoes"){
+                computerchoiceImage='<img scr="128.jpg"/>';
+            } else(computerchoice==="paper");{computerchoiceImage='<img scr="129.jpg">';}
+            
+            
+            document.getElementById("computer-choice-image").innerHTML = computerchoiceImage;
+          
+
+        }
+        </script>
+    </body>
+</html>

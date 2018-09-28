@@ -1,4 +1,15 @@
-var students = ["Brian"];
+var students = [
+    "Brian",
+    "Meoun Seang Meng",
+    "Roeum Phearun",
+    "Sam Ol Buntheoun",
+    "Pou Srey Mai",
+    "Soun Bory",
+    "Sem Baraing",
+    "Saet Sotheara",
+    "Khat Sonita",
+    "Phun SeyHa",
+    "Choun Kimly"];
 students.sort();
 let list = document.getElementById("projects");
 students.forEach(function(student){

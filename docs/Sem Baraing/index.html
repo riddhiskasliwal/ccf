@@ -1,0 +1,66 @@
+<head>
+    <h1 id="SBR"; style="color:rgb(245, 69, 98); font-size:50; border:50px solid black" > Rock Paper Scissor game </h1>
+</head>
+
+<body>
+    
+
+    <div style="text-align: center">
+        
+       <button id="rock" onclick="userPlay('rock')">Rock</button>
+       <button id="paper" onclick="userPlay('paper')">paper</button>
+       <button id="scissor" onclick="userPlay('scissor')">Rock</button>
+        <img src="rock1.jpg" alt="rock1" style="width:300px">
+      
+        <img src="paper1.jpg" alt="paper1" style="width:300px">
+      
+        <img src="scissor1.jpg" alt="scissor1" style="width:300px">
+      </div>
+    </div>
+    
+    <button type="button" onclick="computerPlay()">Play!</button>
+      <h1 id="user-Choice"></h1>  
+      <h2 id="user-Choice-image"></h2>           
+    <script>
+    function computerPlay(){
+      var random = Math.random();
+        console.log(random);
+        var computerChoice = "rock";
+if (random < 0.34) {
+computerChoice = "rock";
+document.getElementById("computer-chose").src = "rock1.jpg";
+} else if(random < 0.67) {
+computerChoice = "paper";
+document.getElementById("computer-chose").src = "paper1.jpg";
+} else {
+computerChoice = "scissors";
+document.getElementById("computer-chose").src = "scissor1.jpg";
+}
+document.getElementById("computer-choice").innerHTML = "Lucas chose " + computerChoice + "!";
+ }
+         
+         function userPlay(userChoice){
+          if(userChoice === 'rock'){
+           console.log("user Choice is rock")
+           document.getElementById("user-Choice").innerHTML = "User choice is rock";
+           document.getElementById("user-Choice-image").innerHTML = "<img src='rock1.jpg'>";
+                   } else if (userChoice === 'paper') {
+        console.log("user choice is paper")
+        document.getElementById("user-Choice").innerHTML = "User choice is paper";
+        document.getElementById("user-Choice-image").innerHTML = "<img src='paper1.jpg'>";
+         } else {
+           console.log("user choice is scissor");
+           document.getElementById("user-Choice-image").innerHTML = "<img src='scissor.jpg'>";
+           document.getElementById("user-Choice").innerHTML = "User choice is scissor";
+         }
+        computerPlay();
+         }
+      
+    
+        </script>
+        <h1 id="computer-choice"></h1> 
+        <img id="computer-chose" >
+        
+     
+         
+</body>

@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>
+            Game
+        </title>
+    </head>
+    <body>
+        
+        <h4> choose one:</h4>
+        <button type="button" onclick="userplay('paper')">paper</button>
+        <button type="button" onclick="userplay('scissor')">scissor</button>
+        <button type="button" onclick="userplay('rock')">rock</button>
+        <h1 style=text-align:center>Rock Paper Scissor</h1>
+
+       
+        <img src="paper.png" alt=" hand-paper"; style="text-align:center;">
+        <img src="rock.png" alt=" hand-rock"; style="text-align:center;">
+        <img src="scissor.png" alt=" hand-scissor"; style=text-align:center;>
+        <button type="button" onclick="computerplay()">play</button>
+        <h3 id="computer-choice"></h3>
+        <h2 id="computerChoiceImage"></h2>
+        
+        
+        <script>
+            function computerplay(){
+                var random=Math.random()
+                console.log(random);
+                var computerChoice = "rock";
+                if (random < 0.34) {
+                computerChoice = "rock";
+                } else if(random <= 0.67) {
+                computerChoice = "paper";
+                } else {
+                computerChoice = "scissors";
+                }
+                console.log(computerChoice);
+
+                document.getElementById("computerChoice").innerHTML = "Computer chose " + computerChoice + "!";
+                }
+            function userplay(userchoice){
+                if(userchoice==="rock"){
+                    console.log("user choice is rock")
+                }
+                else if(userchoice==="paper"){
+                    console.log("userchoice is paper")
+                }
+                else{
+                    console.log("user choice is scissor")
+                }
+            }
+            
+
+            }    
+                
+               
+            
+            
+            
+        </script>
+
+
+    </body>
+</html>

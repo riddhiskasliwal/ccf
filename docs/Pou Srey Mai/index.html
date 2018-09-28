@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>RPS Game</title>
+</head>
+ <h1>Welcome to RPS Game!</h></h1></head>  
+ <body>
+ <img src="rock.jpg", width="300">
+ <img src="scissor.jpg", width="300">
+ <img src="paper.jpg", width="300">    
+<button id="rock" type="button" onclick="userPlay('Rock')">Rock</button>    
+<button id="paper" type="button" onclick="userPlay('Paper')">Paper</button>
+<button id="scissor" type="button" onclick="userPlay('Scissor')">Scissor</button>
+<button type="button" onclick="computerPlay()">Play!</button>
+<h1 id="user-choice"></h1>
+<script>
+  function userPlay(userChoice){
+  if (userChoice === 'rock'){
+    console.log("user choice is rock");
+     document.getElementById("user-choic").innerHTML = "I chose rock";
+} else if(userChioce === 'paper'){
+    console.log("user choice is paper"); 
+    document.getElementById("paper");
+} else(userChoice === 'scissor'){
+    console.log("user choice is scissor"); 
+    document.getElementById("scissor");}
+}
+  
+</script>
+</body>
+</html>

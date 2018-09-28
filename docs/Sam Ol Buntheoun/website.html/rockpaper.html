@@ -1,0 +1,36 @@
+<html>
+    <head>
+    <title>Rock,Paper,Scissors</title>
+    </head>
+        <body>
+    <h1 style="font-size: 30;background-color: rgb(55, 240, 18);text-align: center; border-style: dashed ;">Rock,Paper,Scissors</h1>
+    <button id="rock" onclick="userplay('paper')">rock</button>
+    <button id="paper" onclick="userplay('paper')">paper</button>
+    <button id="scissors" onclick="userplay('scissors')">scissors</button>
+    <h1 id="userchoice"></h1>
+    <h2 id="userchoice-image"></h2>
+    <h3 id="userchoice-pic"></h3>
+    <script>
+        function userplay(userchoice){
+        if (userchoice==='rock'){
+            console.log("user choice is rock");
+            document.getElementById("userchoice").innerHTML = "userchoice"
+        }else if(userchoice==='paper'){
+            console.log("user choice is paper");
+        }else{
+            console.log("user choice is scissor")
+        }   
+        }
+        function computerplay(){
+            var random = math.random();
+            console.log(random);
+            var computerchoice = "rock";
+            if (random < 0.34){
+
+            }
+        }
+
+    </script>
+        </body>
+    
+</html>

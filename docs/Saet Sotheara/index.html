@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>MY AWESSOME WEBSITE
+
+        </title>
+
+    </head>
+    <body align="center">
+        <h1>rock, paper, scissors</h1>
+        <img 
+            <h3 id="firsth3" style="color:purple; font-size:40; background-color: black;">i am purple</h3>
+           
+            <p style="text-align: center;"><img src="rock.jpg" alt="cute"></p>
+            <p style="text-align: center;"><img src="paper.jpg"alt="cute"></p>
+            <p style="text-align: center;"><img src="scissors.jpg"alt="cute"></p>
+            <button type="button" onClick="computerPlay()" >Play!</button>
+            <div id="computer-choice-inage"></div>
+            <h3>Choose one: </h3>
+            <button id="rock" onclik="userplay('Rock')"</button>
+            <button id="paper" onclik="userplay('Paper')"</button>
+            <button id="button" onclik="userplay('Scissors')"</button>
+            <button type="button" onclik="computerplay()">play!</button>
+            <script> 
+            function userplay(userchoice){
+                if(userchoice=== 'rock'){
+                    consle.log("user choie is rock");
+                } else if(userchoice === 'paper'){
+                    console.log("user choice is paper");
+                } else{
+                    console.log("user choice is paper");
+                    document.getElementById('user-choice').innerHTML = ""
+            function computerPlay(){
+               var random = Math.random();
+                console.log(random);
+                var computerChoice = "rock";
+                if (random < 0.34) {
+                computerChoice = "rock";
+                } else if(random < 0.67) {
+                computerChoice = "paper";
+                } else {
+                computerChoice = "scissors";
+                }
+                console.log(computerChoice);      
+                document.getElementById("computer-choice").innerHTML = "Computer chose " + computerChoice + "!";
+                var computerChoiceImage = '<img src="rock.jpeg"with>';
+                if(computerChoice === "paper") {
+                computerChoiceImage = '<img src="paper.jpng">';
+                }
+                else if(computerChoice === "scissors") {
+                computerChoiceImage = '<img src="scissors.jpng">';
+                }
+                document.getElementById("computer-choice-image").innerHTML = computerChoiceImage;
+           }
+            </script> 
+            <h1 id="computerchoice"></h1>
+            <h2 id="computer-choice-image"></h2>
+    </body>
+</html>

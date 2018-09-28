@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            RPS Game
+        </title>
+    </head>
+    <body>
+    <h1>Welcome to RPS Game!</h1>
+    <p style="text-align: center">
+    <img src="rock.jpg" alt="rock" ; width="300" height="300">
+    <img src="paper.jpg" alt="paper"; width="300" height="300">
+    <img src="scissor.jpg" alt="scissor"; width="300" height="300"></p>
+    <button type="button" onclick="computerPlay()">Play!</button>
+    
+        <H1 id= "choser">
+    
+        </H1>         
+
+    <script> 
+     function computerPlay(){
+     var random = Math.random();
+     console.log(random)
+     var computerChoice = "rock";
+
+    if (random < 0.34) {
+    computerChoice = "rock";
+    } else if(random < 0.67) {
+    computerChoice = "paper";
+    } else {
+    computerChoice = "scissors";}
+    console.log(computerChoice);
+
+    if (computerChoice == "paper"){
+        document.getElementById("choser").innerHTML = "<img src='paper.jpg'; width='300'>"}
+    else if (computerChoice == "rock"){
+        document.getElementById("choser").innerHTML = "<img src='rock.jpg'; width='300'>"}
+    else {document.getElementById("choser").innerHTML = "<img src='scissor.jpg'; width='300'>"}
+    }
+
+    </script>
+    </body>
+</html>
