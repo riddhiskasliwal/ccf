@@ -1,0 +1,23 @@
+.icons{
+    font-size: 150px;
+}
+.rock{
+    color: orangered;
+}
+.paper{
+    color: blueviolet;
+}
+.scissors{
+    color: chartreuse;
+}
+.choice{
+    font-weight: bold;
+}
+.computer-choice-icon{
+    color: brown;
+    font-size: 50px;
+}
+.user-choice-icon{
+    color:darkgreen;
+    font-size: 50px;
+}

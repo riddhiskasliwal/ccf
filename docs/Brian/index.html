@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>The most awesome Rock, Paper and Scissors!</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="index.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
+    <body class="container mt-3 text-center">
+        <div class="row mb-4">
+            <div class="col-sm-12">
+                <h2>The Most Awesome Rock, Paper and Scissors!</h2>
+            </div>
+        </div>
+        <div class="row">
+                <div class="col-sm-12">
+                    <h6>Click to select your choice:</h6>
+                </div>
+            </div>
+        <div class="row mb-4">
+            <div class="col-sm-4">
+                <i class="fas fa-hand-rock icons rock" onclick="play('Rock');"></i><br/>
+                Rock
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-hand-paper icons paper" onclick="play('Paper')"></i><br/>
+                Paper
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-hand-scissors icons scissors" onclick="play('Scissors')"></i><br/>
+                Scissors
+            </div>
+        </div>
+        <div id="resultDiv" class="row d-none mt-3 mb-4">
+            <div class="col-sm-12">
+                <h4>Game Result:</h4>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <i id="computerChoiceIcon"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        Computer chose <span class="choice" id="computerChoice"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <i id="userChoiceIcon"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        You chose <span class="choice" id="userChoice"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 mt-3">
+                <h6 id="result"></h6>
+            </div>
+            <div class="col-sm-12 mt-4">
+                <h4>Score:</h4>
+                <div class="row">
+                    <div class="col-sm-2">
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="row">
+                            <div class="col-sm-5">
+                                Computer
+                            </div>
+                            <div class="col-sm-2">
+                            </div>
+                            <div class="col-sm-5">
+                                User
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-sm-5">
+                                    <span id="computerScore"></span>
+                                </div>
+                                <div class="col-sm-2">
+                                    :
+                                </div>
+                                <div class="col-sm-5">
+                                    <span id="userScore"></span>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-sm-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="index.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+                integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+                crossorigin="anonymous"></script>
+    </body>
+</html>

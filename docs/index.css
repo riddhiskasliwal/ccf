@@ -1,0 +1,28 @@
+@media (min-width: 768px) {
+    .container-small {
+        width: 500px!important;
+    }
+    .container-large {
+        width: 970px!important;
+    } 
+} 
+@media (min-width: 992px) {
+    .container-small {
+        width: 700px!important;
+    }
+    .container-large {
+        width: 1170px!important;
+    } 
+} 
+@media (min-width: 1200px) {
+    .container-small {
+        width: 900px!important;
+    }
+    .container-large {
+        width: 1500px!important;
+    } 
+}
+
+.container-small, .container-large {
+    max-width: 100%!important;
+}
